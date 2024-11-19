@@ -8,47 +8,47 @@ import { FaArrowRight } from "react-icons/fa";
 const Doctors = () => {
   const data = [
     {
-      img: "/src/assets/img/doc4.jpg",
+      img: "/src/assets/img/doc5.jpg",
       name: "Dr. Serena Mitchell",
       specialties: "Orthopedic Surgeon",
     },
     {
-      img: "/src/assets/img/doc5.jpg",
+      img: "/src/assets/img/doc7.jpg",
       name: "Dr. Julian Bennett",
       specialties: "Cardiologist",
     },
     {
-      img: "/src/assets/img/doc6.jpg",
+      img: "/src/assets/img/doc8.jpg",
       name: "Dr. Camila Rodriguez",
       specialties: "Pediatrician",
     },
     {
-      img: "/src/assets/img/doc4.jpg",
+      img: "/src/assets/img/doc9.jpg",
       name: "Dr. Victor Nguyen",
       specialties: "Neurologist",
     },
     {
-      img: "/src/assets/img/doc5.jpg",
+      img: "/src/assets/img/doc10.jpg",
       name: "Dr. Ethan Carter",
       specialties: "Dermatologist",
     },
     {
-      img: "/src/assets/img/doc6.jpg",
+      img: "/src/assets/img/doc11.jpg",
       name: "Dr. Olivia Martinez",
       specialties: "Ophthalmologist",
     },
     {
-      img: "/src/assets/img/doc7.jpg",
+      img: "/src/assets/img/doc12.jpg",
       name: "Dr. Sophia Lee",
       specialties: "Physiotherapist",
     },
     {
-      img: "/src/assets/img/doc8.jpg",
+      img: "/src/assets/img/blog1.jpg",
       name: "Dr. James Hamilton",
       specialties: "Physiotherapist",
     },
     {
-      img: "/src/assets/img/doc9.jpg",
+      img: "/src/assets/img/blog2.jpg",
       name: "Dr. Emma Clark",
       specialties: "Physiotherapist",
     },
