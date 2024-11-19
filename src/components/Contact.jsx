@@ -1,126 +1,138 @@
-import React, { useRef } from 'react'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import React, { useState } from "react";
 
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    consent: false,
+  });
 
-const Contact = () => {
-    const data = [
-        {
-          img: "/src/assets/img/doc7.jpg",
-          name: "Dr. Serena Mitchell",
-          specialties: "Orthopedic Surgeon",
-        },
-        {
-          img: "/src/assets/img/doc8.jpg",
-          name: "Dr. Julian Bennett",
-          specialties: "Cardiologist",
-        },
-        {
-          img: "/src/assets/img/doc9.jpg",
-          name: "Dr. Camila Rodriguez",
-          specialties: "Pediatrician",
-        },
-        {
-          img: "/src/assets/img/doc10.jpg",
-          name: "Dr. Victor Nguyen",
-          specialties: "Neurologist",
-        },
-        {
-          img: "/src/assets/img/doc11.jpg",
-          name: "Dr. Ethan Carter",
-          specialties: "Dermatologist",
-        },
-        {
-          img: "/src/assets/img/doc12.jpg",
-          name: "Dr. Olivia Martinez",
-          specialties: "Ophthalmologist",
-        },
-      ];
-      const slider = useRef(null);
-  
-      const settings = {
-        accessibility: true,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        arrows: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 1023,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true,
-            },
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2,
-            },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              initialSlide: 2,
-            },
-          },
-        ],
-      };
-      
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (formData.consent) {
+      console.log("Form Data Submitted:", formData);
+      setIsSubmitted(true);
+    } else {
+      alert("Please agree to be contacted.");
+    }
+  };
+
+  const handleClose = () => {
+    setIsSubmitted(false);
+    setFormData({
+      name: "",
+      phone: "",
+      consent: false,
+    });
+  };
+
   return (
-    <div className="min-h-screen flex flex-col justify-center lg:px-32 px-5 pt-16"> 
-        <div className="flex flex-col items-center lg:flex-row justify-between mb-10 lg:mb-0">
-             <div>
-                <h1 className='text-4xl font-semibold text-center lg:text-start'>Contact</h1>
-             <p className="mt-2 text-center lg:text-start">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, nostrum!
-                </p>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden max-w-3xl w-full flex flex-col md:flex-row">
+        {/* Left Side Content */}
+        <div className="bg-green-500 text-white p-6 md:p-8 flex-1 flex flex-col justify-center">
+          <h2 className="text-2xl font-bold mb-4">Welcome to Rapid Healing</h2>
+          <p className="text-sm">
+            Book your consultation now for a healthier and pain-free lifestyle.
+          </p>
+          <p className="text-sm mt-4">
+            <strong>Contact:</strong> +91 93543 73641
+          </p>
         </div>
-             <div className='flex gap-5 mt-4 lg:mt-0'>
-                 <button className="bg-[#d5f2ec] text-backgroundColor ppx-4 py-2 rounded-lg active:bg-[#ade9dc]"
-                 onClick={() => slider.current.slickPrev()}
-                 >
-                 <FaArrowLeft size={25}/>
-                 </button>
-                 <button className="bg[#d5f2ec] text-backgroundColor px-4 py-2 rounded-lg active:bg-[active:bg-[#ade9dc]"
-                 onClick={() => slider.current.slickNext()}>
-                    <FaArrowRight size={25}/>
-                 </button>
-             </div>
-        </div>
-    <div className="mt-5">
-       <Slider ref={slider} {...settings}>
-       {data.map((e,index)=>(
-        <div className="h-[350px] text-black  rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mb-2 cursor-pointer"
-        key={index}
-        
-        >
-            <div>
-                <img src={e.img} alt="img"
-                className="h-56 rounded-t-xl w-full"
-                />
-            </div>
-            <div className="flex flex-col justify-center items-center"> 
-               <h1 className=" font-semibold text-xl pt-4">{e.name}</h1> 
-               <h3 className="pt-2">{e.specialties}</h3>
-            </div>
-        </div>
-      
-    ))}
-        </Slider>    
-     </div>
-    </div>
-  )
-}
 
-export default Contact
+        {/* Right Side Form */}
+        <div className="p-6 md:p-8 flex-1">
+          {isSubmitted ? (
+            <div className="text-center">
+              <h2 className="text-2xl font-bold text-green-500 mb-4">
+                Thank You!
+              </h2>
+              <p className="text-gray-700 mb-4">
+                We’ll contact you shortly to confirm your booking.
+              </p>
+              <button
+                onClick={handleClose}
+                className="bg-red-500 text-white py-2 px-4 rounded-lg shadow hover:bg-red-600 active:bg-red-700"
+              >
+                Close
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <h1 className="text-2xl font-semibold text-center text-gray-800">
+                Book an Appointment
+              </h1>
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your Name"
+                  required
+                  className="w-full mt-1 p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="Your Phone Number"
+                  required
+                  className="w-full mt-1 p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
+                />
+              </div>
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  name="consent"
+                  id="consent"
+                  checked={formData.consent}
+                  onChange={handleChange}
+                  className="h-5 w-5 text-green-500 border-gray-300 rounded focus:ring-green-500"
+                />
+                <label htmlFor="consent" className="ml-2 text-gray-700 text-sm">
+                  I agree to be contacted for booking confirmation.
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-green-500 text-white py-3 rounded-lg font-medium shadow hover:bg-green-600 active:bg-green-700"
+              >
+                Submit
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContactForm;

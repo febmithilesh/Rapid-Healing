@@ -19,7 +19,7 @@ const Services = () => {
       <div className=" flex flex-col items-center lg:flex-row justify-between">
         <div>
           <h1 className=" text-4xl font-semibold text-center lg:text-start">
-             Services
+          How We Work
           </h1>
           <p className=" mt-2 text-center lg:text-start">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
@@ -40,3 +40,5 @@ const Services = () => {
 };
 
 export default Services;
+
+
