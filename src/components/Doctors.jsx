@@ -8,52 +8,52 @@ import { FaArrowRight } from "react-icons/fa";
 const Doctors = () => {
   const data = [
     {
-      img: "/src/assets/img/doc5.jpg",
-      name: "Dr. Serena Mitchell",
+      img: "https://img.freepik.com/free-photo/physical-rehabilitation-therapy-medium-shot_23-2149173475.jpg?t=amst=1732007908~exp=1732011508~hmac=8375c1d94fc2765b886d2615f0edbf55067c7fd817b4ead882d8c866ae7fdd4a&w=996",
+      name: "Dr. Jhone ",
       specialties: "Orthopedic Surgeon",
     },
     {
-      img: "/src/assets/img/doc7.jpg",
+      img: "https://img.freepik.com/free-photo/doctor-helping-patient-rehabilitation_23-2150321625.jpg?t=st=1732007774~exp=1732011374~hmac=ef4447d5f4ba9b2fbba732f0d2ab9a71772710e06ee7a83ab642893e067ec90e&w=996",
       name: "Dr. Julian Bennett",
       specialties: "Cardiologist",
     },
     {
-      img: "/src/assets/img/doc8.jpg",
+      img: "https://img.freepik.com/free-photo/medium-shot-athlete-doing-physiotherapy_23-2149866138.jpg?t=st=1732008119~exp=1732011719~hmac=328b82e0cbc9ab24c5d4e956b953f80a0988e6ca101654236580159d98d7e897&w=996",
       name: "Dr. Camila Rodriguez",
       specialties: "Pediatrician",
     },
     {
-      img: "/src/assets/img/doc9.jpg",
+      img: "https://img.freepik.com/free-photo/male-osteopathic-therapist-with-medical-mask-checking-female-patient-s-neck-muscles_23-2148846628.jpg?t=st=1732008115~exp=1732011715~hmac=6db3fb13418a59db1a34aac0c3775d6263662821885ea7fd7492c073298f57e9&w=996",
       name: "Dr. Victor Nguyen",
       specialties: "Neurologist",
     },
     {
-      img: "/src/assets/img/doc10.jpg",
+      img: "https://img.freepik.com/premium-photo/adult-man-trains-muscle-strength-with-professional-doctor-modern-rehabilitation-clinic-phy_136615-520.jpg?w=1060",
       name: "Dr. Ethan Carter",
       specialties: "Dermatologist",
     },
     {
-      img: "/src/assets/img/doc11.jpg",
+      img: "https://img.freepik.com/premium-photo/patient-sitting-showing-spine-model-where-she-feels-pain_232070-2095.jpg?w=996",
       name: "Dr. Olivia Martinez",
       specialties: "Ophthalmologist",
     },
     {
-      img: "/src/assets/img/doc12.jpg",
+      img: "https://img.freepik.com/free-photo/woman-having-physiotherapy-session_23-2149115643.jpg?t=st=1732008208~exp=1732011808~hmac=0ca323bf92d90ad62756a8193cff305dd3896bf81a3b9291995bdd08fb785b62&w=996",
       name: "Dr. Sophia Lee",
       specialties: "Physiotherapist",
     },
     {
-      img: "/src/assets/img/blog1.jpg",
+      img: "https://img.freepik.com/premium-photo/young-female-doctor-examining-patient-medical-office_109710-355.jpg?w=996",
       name: "Dr. James Hamilton",
       specialties: "Physiotherapist",
     },
     {
-      img: "/src/assets/img/blog2.jpg",
+      img: "https://img.freepik.com/free-photo/physiotherapist-helping-female-patient-her-clinic_23-2149115563.jpg?t=st=1732008255~exp=1732011855~hmac=017b4ffc98bbe086a3fd26156ce5c2be635c4263166b70ab2ebb30070b7d2b42&w=996",
       name: "Dr. Emma Clark",
       specialties: "Physiotherapist",
     },
     {
-      img: "/src/assets/img/doc10.jpg",
+      img: "https://img.freepik.com/free-photo/medical-assistant-helping-patient-with-physiotherapy-exercises_23-2149071463.jpg?t=st=1732008329~exp=1732011929~hmac=700e68987b658189d8f8dea60988cb82be3f52b664e1e5797eae66f275b76327&w=996",
       name: "Dr. Noah Williams",
       specialties: "Physiotherapist",
     },
