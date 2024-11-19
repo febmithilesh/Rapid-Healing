@@ -10,9 +10,6 @@ import Doctors from "./components/Doctors";
 import Testimonials from "./components/Testimonials";
 import  Faq from "./components/Faq" 
 
-
-
-
 const App = () => {
   return (
     <div>
