@@ -6,9 +6,9 @@ const Home = () => {
     <div className="min-h-screen flex flex-col justify-center lg:px-32 px-5 text-white bg-[url('assets/img/Home.png')] bg-no-repeat bg-cover bg-center opacity-90">
       <div className="w-full lg:w-4/5 space-y-5 mt-10 text-center lg:text-left">
         {/* Header */}
-        <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
+        <h1 className="text-3xl lg:text-5xl font-bold leading-tight">
         From Pain to Peak Performance.
-        </h2>
+        </h1>
         
         {/* Description */}
         <p className="text-sm lg:text-base">
@@ -26,6 +26,9 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
 
 
 
