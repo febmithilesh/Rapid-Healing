@@ -7,7 +7,7 @@ const Home = () => {
       <div className="w-full lg:w-4/5 space-y-5 mt-10 text-center lg:text-left">
         {/* Header */}
         <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
-          Pain signals physiotherapist.
+        From Pain to Peak Performance.
         </h2>
         
         {/* Description */}
