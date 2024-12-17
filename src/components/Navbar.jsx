@@ -31,7 +31,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center cursor-pointer space-x-8">
           {["home", "about", "services", "blog", "contact"].map((item) => (
             <Link
               key={item}
